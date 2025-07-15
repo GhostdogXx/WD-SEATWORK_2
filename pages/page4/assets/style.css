@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0e0e0e;
+    color: #f0f0f0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    background-color: #1c1c1c;
+    padding: 2rem 1rem;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 3px solid crimson;
+}
+
+.sidebar-logo {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: crimson;
+}
+
+.sidebar-menu {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar-menu li {
+    margin: 1rem 0;
+}
+
+.sidebar-menu a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.sidebar-menu a.active,
+.sidebar-menu a:hover {
+    background-color: crimson;
+    color: #fff;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: crimson;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-info div {
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #222;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    background: crimson;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: darkred;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid #333;
+}
