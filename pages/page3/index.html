@@ -5,65 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teen Titans - Meet the Team</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <h2 class="logo">Teen Titans</h2>
-        <nav class="side-nav">
-            <a href="../index.html">Home</a>
-            <a href="../page1/index.html/">About</a>
-            <a href="../page2/index.html">Skills</a>
-            <a href="../page3/index.html" >Team</a>
-            <a href="../page4/index.html">Contact</a>
-        </nav>
-        <div class="footer-top">
-            <p>© 2025 Teen Titans</p>
-            <small>Built for heroes.</small>
+    <!-- Top Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">TEEN</span>
+                <span class="logo-accent">TITANS</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../page1/index.html/" class="nav-link">About</a>
+                <a href="../page2/index.html" class="nav-link">Skills</a>
+                <a href="../page3/index.html" class="nav-link active">Team</a>
+                <a href="../page4/index.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </aside>
+    </header>
 
-    <!-- Main Team Section -->
-    <main class="main-content">
-        <section class="team-intro">
-            <h1>Unstoppable. Unbreakable. United.</h1>
-            <p>Get to know the incredible team behind the mask.</p>
-        </section>
-
-        <section class="team-grid">
-            <div class="card">
-                <img src="./assets/img/Robin - team.jpg" alt="Robin">
-                <h3>Robin</h3>
-                <p>Strategic leader trained by Batman with unmatched combat and detective skills.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-line">UNSTOPPABLE</span>
+                <span class="hero-line">UNBREAKABLE</span>
+                <span class="hero-line">UNITED</span>
+            </h1>
+            <p class="hero-subtitle">Meet the legendary heroes who protect Jump City</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Heroes</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Powers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Mission</span>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <img src="./assets/img/Startfire - team.jpg" alt="Starfire">
-                <h3>Starfire</h3>
-                <p>Alien princess with incredible strength and energy projection abilities.</p>
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Team</h2>
+                <p class="section-description">Each member brings unique abilities and unwavering dedication to justice</p>
             </div>
+            
+            <div class="team-grid">
+                <article class="team-card">
+                    <div class="card-image">
+                        <img src="./assets/img/Robin - team.jpg" alt="Robin">
+                        <div class="card-overlay">
+                            <div class="card-icon">⚔️</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">Robin</h3>
+                        <span class="card-role">Team Leader</span>
+                        <p class="card-description">Strategic mastermind trained by Batman with unmatched combat skills and detective abilities.</p>
+                        <div class="card-stats">
+                            <div class="stat-bar">
+                                <span class="stat-label">Leadership</span>
+                                <div class="stat-progress" style="--progress: 95%"></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span class="stat-label">Combat</span>
+                                <div class="stat-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            <div class="card">
-                <img src="./assets/img/Raven - team.jpg" alt="Raven">
-                <h3>Raven</h3>
-                <p>Half-demon sorceress with dark magic, empathy, and teleportation powers.</p>
+                <article class="team-card">
+                    <div class="card-image">
+                        <img src="./assets/img/Startfire - team.jpg" alt="Starfire">
+                        <div class="card-overlay">
+                            <div class="card-icon">✨</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">Starfire</h3>
+                        <span class="card-role">Alien Princess</span>
+                        <p class="card-description">Tamaranean warrior with incredible strength and energy projection abilities.</p>
+                        <div class="card-stats">
+                            <div class="stat-bar">
+                                <span class="stat-label">Strength</span>
+                                <div class="stat-progress" style="--progress: 98%"></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span class="stat-label">Energy</span>
+                                <div class="stat-progress" style="--progress: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="card-image">
+                        <img src="./assets/img/Raven - team.jpg" alt="Raven">
+                        <div class="card-overlay">
+                            <div class="card-icon">🔮</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">Raven</h3>
+                        <span class="card-role">Dark Sorceress</span>
+                        <p class="card-description">Half-demon mystic with dark magic, empathy, and teleportation powers.</p>
+                        <div class="card-stats">
+                            <div class="stat-bar">
+                                <span class="stat-label">Magic</span>
+                                <div class="stat-progress" style="--progress: 100%"></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span class="stat-label">Wisdom</span>
+                                <div class="stat-progress" style="--progress: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="card-image">
+                        <img src="./assets/img/Beastboy - team.jpg" alt="Beast Boy">
+                        <div class="card-overlay">
+                            <div class="card-icon">🦁</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">Beast Boy</h3>
+                        <span class="card-role">Shape-shifter</span>
+                        <p class="card-description">Versatile hero with the power to transform into any animal on Earth.</p>
+                        <div class="card-stats">
+                            <div class="stat-bar">
+                                <span class="stat-label">Adaptability</span>
+                                <div class="stat-progress" style="--progress: 96%"></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span class="stat-label">Humor</span>
+                                <div class="stat-progress" style="--progress: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="card-image">
+                        <img src="./assets/img/Cyborg - team.jpg" alt="Cyborg">
+                        <div class="card-overlay">
+                            <div class="card-icon">🤖</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-name">Cyborg</h3>
+                        <span class="card-role">Tech Powerhouse</span>
+                        <p class="card-description">Cybernetic genius combining human heart with machine precision.</p>
+                        <div class="card-stats">
+                            <div class="stat-bar">
+                                <span class="stat-label">Technology</span>
+                                <div class="stat-progress" style="--progress: 100%"></div>
+                            </div>
+                            <div class="stat-bar">
+                                <span class="stat-label">Power</span>
+                                <div class="stat-progress" style="--progress: 94%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <img src="./assets/img/Beastboy - team.jpg" alt="Beast Boy">
-                <h3>Beast Boy</h3>
-                <p>Shape-shifter with the power to transform into any animal on Earth.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2025 Teen Titans</p>
+                <span>Built for heroes, by heroes</span>
             </div>
-
-            <div class="card">
-                <img src="./assets/img/Cyborg - team.jpg" alt="Cyborg">
-                <h3>Cyborg</h3>
-                <p>Tech genius and powerhouse. Part human, part machine, all hero.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">YouTube</a>
             </div>
-        </section>
-    </main>
-
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,123 +1,253 @@
-/* Reset and Fonts */
+/* Base Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ff6b35;
+  --secondary: #00d4ff;
+  --accent: #7c3aed;
+  --bg-dark: #0a0b14;
+  --bg-darker: #050611;
+  --text-light: #f5f5f5;
+  --text-muted: #8a8fa3;
+  --card-dark: #14151e;
+  --border: #2d2f3a;
 }
 
 body {
-    display: flex;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, #1b1b2f, #2f2f46);
-    color: #fff;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
-/* Sidebar Styles */
-.sidebar {
-    width: 250px;
-    min-height: 100vh;
-    background-color: #12122c;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
+/* Navbar */
+.navbar {
+  background-color: var(--bg-darker);
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  position: static;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-family: 'Rajdhani', sans-serif;
-    color: #ff4ec7;
-    margin-bottom: 2rem;
-    text-align: center;
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
 }
 
-.side-nav a {
-    display: block;
-    text-decoration: none;
-    color: #ccc;
-    margin: 1rem 0;
-    padding: 0.5rem;
-    border-left: 4px solid transparent;
-    transition: all 0.3s ease;
-    font-weight: bold;
+.logo-accent {
+  color: var(--primary);
 }
 
-.side-nav a:hover,
-.side-nav a.active {
-    color: #fff;
-    border-left: 4px solid #ff4ec7;
-    background-color: #1f1f3a;
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.footer-top {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #777;
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: color 0.3s;
 }
 
-/* Main Content */
-.main-content {
-    margin-left: 250px;
-    padding: 2rem;
-    flex: 1;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--secondary);
 }
 
-/* Team Intro */
-.team-intro {
-    text-align: center;
-    margin-bottom: 3rem;
+/* Hero Section */
+.hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+  text-align: left;
 }
 
-.team-intro h1 {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 2.5rem;
-    color: #ff4ec7;
-    margin-bottom: 0.5rem;
+.hero-content {
+  max-width: 700px;
+  margin-left: 5%;
 }
 
-.team-intro p {
-    font-size: 1.1rem;
-    color: #bbb;
+.hero-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: var(--secondary);
 }
 
-/* Team Grid */
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+.hero-stats {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: left;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Team Section */
+.team-section {
+  padding: 6rem 2rem;
+  background-color: var(--bg-darker);
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 3rem;
+  padding-left: 5%;
+}
+
+.section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.section-description {
+  max-width: 500px;
+  color: var(--text-muted);
+}
+
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 5%;
 }
 
-.card {
-    background-color: #1a1a30;
-    border-radius: 12px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
+.team-card {
+  background: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    background-color: #222240;
+.team-card:hover {
+  transform: translateY(-10px);
 }
 
-.card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+.card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-.card h3 {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.3rem;
-    color: #ff4ec7;
-    margin-bottom: 0.5rem;
+.card-content {
+  padding: 1.5rem;
 }
 
-.card p {
-    font-size: 0.95rem;
-    color: #d2d2d2;
+.card-name {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  font-family: 'Orbitron', monospace;
+}
+
+.card-role {
+  color: var(--secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stat-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.stat-progress {
+  width: 100%;
+  height: 6px;
+  background-color: var(--border);
+  margin-top: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.stat-progress::after {
+  content: '';
+  display: block;
+  height: 100%;
+  background: var(--primary);
+  width: var(--progress);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--border);
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.footer-text p {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.footer-text span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: var(--secondary);
 }
